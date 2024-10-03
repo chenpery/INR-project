@@ -9,7 +9,7 @@ from utils import set_random_seeds, vec_to_img, get_fmnist_functa
 import numpy as np
 from SIREN import ModulatedSIREN
 import argparse
-
+from mlp import MLP, ACTIVATIONS, ACTIVATION_DEFAULT_KWARGS
 # A basic linear classifier.
 class VanillaClassifier(nn.Module):
     def __init__(self, in_features=512, num_classes=10):
@@ -18,13 +18,10 @@ class VanillaClassifier(nn.Module):
         :param num_classes: number of classes (output dimension).
         """
         super(VanillaClassifier, self).__init__()
-        self.net = nn.Linear(in_features, num_classes)
-
+        self.net= MLP(in_dim=in_features, dims=[128]*4+[num_classes], nonlins=["silu"]*4 +["none"],
+                      p_dropout=0.1)
     def forward(self, x):
         return self.net(x)
-
-
-
 
 
 if __name__ == '__main__':
