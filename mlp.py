@@ -10,9 +10,12 @@ ACTIVATIONS = {
     "logsoftmax": nn.LogSoftmax,
     "lrelu": nn.LeakyReLU,
     "silu": nn.SiLU,
+    "gelu": nn.GELU,
+    "elu": nn.ELU,
     "none": nn.Identity,
     None: nn.Identity,
 }
+
 
 # Default keyword arguments to pass to activation class constructors, e.g.
 # activation_cls(**ACTIVATION_DEFAULT_KWARGS[name])
@@ -32,7 +35,7 @@ class MLP(nn.Module):
     """
 
     def __init__(
-            self, in_dim: int, dims: Sequence[int], nonlins: Sequence[Union[str, nn.Module]], p_dropout:Union[float,None]
+            self, in_dim: int, dims: Sequence[int], nonlins: Sequence[Union[str, nn.Module]], p_dropout:Union[float,None], normalization: str
     ):
         """
         :param in_dim: Input dimension.
@@ -51,6 +54,12 @@ class MLP(nn.Module):
         dims = [in_dim] + dims
         for i in range(len(dims) - 1):
             layers.append(nn.Linear(dims[i], dims[i + 1], bias=True))
+            if normalization == "layer":
+                if i < len(dims) - 2:  # Apply LayerNorm to hidden layers only
+                   layers.append(nn.LayerNorm(dims[i + 1]))
+            if normalization == "batch":
+                if i < len(dims) - 2:  # Apply BatchNorm to hidden layers only
+                    layers.append(nn.BatchNorm1d(dims[i + 1]))
             if nonlins[i] in ACTIVATIONS:
                 layers.append(ACTIVATIONS[nonlins[i]](
                     **ACTIVATION_DEFAULT_KWARGS[nonlins[i]]))
@@ -58,6 +67,7 @@ class MLP(nn.Module):
                 layers.append(nonlins[i])
             if i < (len(dims) - 2) and p_dropout is not None:
                 layers.append(nn.Dropout(p_dropout))
+
         self.layers = nn.Sequential(*layers)
 
     def forward(self, x: Tensor) -> Tensor:

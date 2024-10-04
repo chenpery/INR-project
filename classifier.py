@@ -10,16 +10,17 @@ import numpy as np
 from SIREN import ModulatedSIREN
 import argparse
 from mlp import MLP, ACTIVATIONS, ACTIVATION_DEFAULT_KWARGS
+import torch.nn.utils.weight_norm as weight_norm
 # A basic linear classifier.
 class VanillaClassifier(nn.Module):
-    def __init__(self, in_features=512, num_classes=10):
+    def __init__(self, in_features=512, num_classes=10, hidden_dims=None, nonlins=None, p_dropout=None, normalization=""):
         """
         :param in_features: input_dimension.
         :param num_classes: number of classes (output dimension).
         """
         super(VanillaClassifier, self).__init__()
-        self.net= MLP(in_dim=in_features, dims=[128]*4+[num_classes], nonlins=["silu"]*4 +["none"],
-                      p_dropout=0.1)
+        self.net= MLP(in_dim=in_features, dims=hidden_dims+[num_classes], nonlins=nonlins +["none"],
+                      p_dropout=p_dropout, normalization=normalization)
     def forward(self, x):
         return self.net(x)
 

@@ -33,3 +33,4 @@ class FitResult(NamedTuple):
     train_acc: List[float]
     test_loss: List[float]
     test_acc: List[float]
+    last_checkpoint_idx:int

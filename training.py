@@ -62,7 +62,7 @@ class Trainer(abc.ABC):
         """
         actual_num_epochs = 0
         train_loss, train_acc, test_loss, test_acc = [], [], [], []
-
+        checkpoint_idx = None
         best_acc = None
         epochs_without_improvement = 0
 
@@ -82,7 +82,7 @@ class Trainer(abc.ABC):
         for epoch in range(num_epochs):
             save_checkpoint = False
             verbose = False  # pass this to train/test_epoch.
-            if epoch % print_every == 0 or epoch == num_epochs - 1:
+            if print_every is not None and (epoch % print_every == 0 or epoch == num_epochs - 1):
                 verbose = True
             self._print(f"--- EPOCH {epoch + 1}/{num_epochs} ---", verbose)
 
@@ -126,6 +126,7 @@ class Trainer(abc.ABC):
                     model_state=self.model.state_dict(),
                 )
                 torch.save(saved_state, checkpoint_filename)
+                checkpoint_idx= epoch
                 print(
                     f"*** Saved checkpoint {checkpoint_filename} " f"at epoch {epoch + 1}"
                 )
@@ -133,7 +134,7 @@ class Trainer(abc.ABC):
             if post_epoch_fn:
                 post_epoch_fn(epoch, train_result, test_result, verbose)
 
-        return FitResult(actual_num_epochs, train_loss, train_acc, test_loss, test_acc)
+        return FitResult(actual_num_epochs, train_loss, train_acc, test_loss, test_acc, checkpoint_idx)
 
     def train_epoch(self, dl_train: DataLoader, **kw) -> EpochResult:
         """
