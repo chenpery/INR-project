@@ -7,7 +7,7 @@ from training import ClassifierTrainer
 from classifier import VanillaClassifier
 from utils import set_random_seeds, vec_to_img, get_fmnist_functa
 import itertools
-
+import random
 
 if __name__ == '__main__':
     # Configure logging
@@ -29,7 +29,6 @@ if __name__ == '__main__':
     in_features = 512
     checkpoint_file = 'checkpoints/mlp'
     num_epochs = 500
-    early_stopping = 8
     loss_fn = nn.CrossEntropyLoss()
 
 
@@ -38,13 +37,16 @@ if __name__ == '__main__':
         'hidden_sizes': [
             [512, 256, 128],
             [256, 128],
-            [128, 64]
+            [128, 128],
+            [512,512,512],
+            [128,64]
+
         ],
         'p_dropout': [None, 0.1, 0.3],
         'batch_size': [32,64,128,256],
         'normalization': ["", "layer", "batch"],
-        'activation': ["relu", "gelu", "elu", "lrelu"],
-        'early_stopping': [5, 10, 15]
+        'activation': ["relu", "lrelu"],
+        'early_stopping': [5, 10]
     }
 
     # To store the best results
@@ -56,10 +58,16 @@ if __name__ == '__main__':
     values = param_grid.values()
     param_combinations = [dict(zip(keys, v)) for v in itertools.product(*values)]
 
+    # Random search: Define number of random combinations to test
+    random_sample_size = 150 # For example, test 100 randomly selected combinations
+
+    # Randomly sample parameter combinations
+    random_combinations = random.sample(param_combinations, random_sample_size)
+
     # Iterate over all hyperparameter combinations
-    for idx, params in enumerate(param_combinations):
+    for idx, params in enumerate(random_combinations):
         try:
-            logger.info(f"Testing combination {idx + 1}/{len(param_combinations)}: {params}")
+            logger.info(f"Testing combination {idx + 1}/{len(random_combinations)}: {params}")
 
             set_random_seeds(0)
 
@@ -73,7 +81,7 @@ if __name__ == '__main__':
             model = VanillaClassifier(in_features=in_features, num_classes=num_classes, hidden_dims=hidden_dims,
                                       nonlins=activations, p_dropout=params['p_dropout'],
                                       normalization=params['normalization']).to(device)
-            optimizer = optim.Adam(model.parameters(), lr=params['lr'])
+            optimizer = optim.AdamW(model.parameters(), lr=params['lr'])
             scheduler = optim.lr_scheduler.ReduceLROnPlateau(
                 optimizer, mode='max', factor=0.1, patience=3, verbose=True
             )
@@ -83,10 +91,11 @@ if __name__ == '__main__':
 
             trainer = ClassifierTrainer(model, loss_fn, optimizer, device)
             fit_res = trainer.fit(train_functaloader, val_functaloader, num_epochs, max_batches=None,
-                                  post_epoch_fn=post_epoch_fn, early_stopping=early_stopping,
+                                  post_epoch_fn=post_epoch_fn, early_stopping=params['early_stopping'],
                                   checkpoints=checkpoint_file + f"{params}", print_every=None)
 
             curr_best_val_acc = fit_res.test_acc[fit_res.last_checkpoint_idx]
+            logger.info(f"curr best accuracy: {curr_best_val_acc}, params: {params}")
             if best_val_accuracy < curr_best_val_acc:
                 best_val_accuracy = curr_best_val_acc
                 best_params = params
@@ -95,5 +104,5 @@ if __name__ == '__main__':
         except Exception as e:
             logger.error(f"Error with params {params}: {e}")
         # Log the final best parameters
-        logger.info(f"Best Validation Accuracy: {best_val_accuracy}")
-        logger.info(f"Best Hyperparameters: {best_params}")
+    logger.info(f"Best Validation Accuracy: {best_val_accuracy}")
+    logger.info(f"Best Hyperparameters: {best_params}")

@@ -59,7 +59,7 @@ class MLP(nn.Module):
                    layers.append(nn.LayerNorm(dims[i + 1]))
             if normalization == "batch":
                 if i < len(dims) - 2:  # Apply BatchNorm to hidden layers only
-                    layers.append(nn.BatchNorm1d(dims[i + 1]))
+                    layers.append(nn.BatchNorm1d(dims[i + 1], momentum=0.05))
             if nonlins[i] in ACTIVATIONS:
                 layers.append(ACTIVATIONS[nonlins[i]](
                     **ACTIVATION_DEFAULT_KWARGS[nonlins[i]]))
