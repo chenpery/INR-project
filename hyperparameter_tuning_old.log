@@ -1,0 +1,457 @@
+2024-10-04 20:17:33,464 [INFO] device: cuda
+2024-10-04 20:17:33,466 [INFO] Testing combination 1/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 20:18:33,107 [INFO] New best accuracy: 89.26, params: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 20:18:33,108 [INFO] Best Validation Accuracy: 89.26
+2024-10-04 20:18:33,108 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 20:18:33,108 [INFO] Testing combination 2/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:20:49,633 [INFO] Best Validation Accuracy: 89.26
+2024-10-04 20:20:49,634 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 20:20:49,634 [INFO] Testing combination 3/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:22:28,868 [INFO] New best accuracy: 89.42, params: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:22:28,868 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:22:28,868 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:22:28,869 [INFO] Testing combination 4/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 20:23:53,502 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:23:53,503 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:23:53,503 [INFO] Testing combination 5/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 32, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 20:31:30,979 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:31:30,980 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:31:30,980 [INFO] Testing combination 6/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 32, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 20:36:00,697 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:36:00,700 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:36:00,700 [INFO] Testing combination 7/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 20:38:47,217 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:38:47,217 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:38:47,217 [INFO] Testing combination 8/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 20:44:33,415 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:44:33,415 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:44:33,415 [INFO] Testing combination 9/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': None, 'batch_size': 128, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 20:45:52,031 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:45:52,031 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:45:52,031 [INFO] Testing combination 10/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:47:17,179 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:47:17,179 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:47:17,179 [INFO] Testing combination 11/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': None, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:49:58,983 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:49:58,983 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:49:58,983 [INFO] Testing combination 12/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': None, 'batch_size': 128, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 20:51:16,081 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:51:16,082 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:51:16,082 [INFO] Testing combination 13/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 20:53:48,240 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:53:48,241 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:53:48,241 [INFO] Testing combination 14/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:54:55,945 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:54:55,946 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:54:55,946 [INFO] Testing combination 15/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 20:55:42,110 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:55:42,110 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:55:42,110 [INFO] Testing combination 16/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 32, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 20:57:48,850 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:57:48,850 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:57:48,850 [INFO] Testing combination 17/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:58:40,347 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:58:40,347 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:58:40,347 [INFO] Testing combination 18/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': None, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 20:59:47,535 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 20:59:47,536 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 20:59:47,536 [INFO] Testing combination 19/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:02:02,504 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:02:02,505 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:02:02,505 [INFO] Testing combination 20/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 21:05:16,403 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:05:16,404 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:05:16,404 [INFO] Testing combination 21/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 21:07:11,277 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:07:11,278 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:07:11,278 [INFO] Testing combination 22/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 21:10:06,379 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:10:06,380 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:10:06,380 [INFO] Testing combination 23/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:11:15,869 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:11:15,869 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:11:15,869 [INFO] Testing combination 24/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 21:13:02,685 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:13:02,686 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:13:02,686 [INFO] Testing combination 25/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 32, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 21:16:29,857 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:16:29,857 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:16:29,857 [INFO] Testing combination 26/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 21:18:07,931 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:18:07,931 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:18:07,931 [INFO] Testing combination 27/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': None, 'batch_size': 128, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 21:21:07,726 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:21:07,726 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:21:07,726 [INFO] Testing combination 28/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 32, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:28:55,373 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:28:55,374 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:28:55,374 [INFO] Testing combination 29/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 21:30:06,909 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:30:06,909 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:30:06,909 [INFO] Testing combination 30/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 21:31:33,480 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:31:33,480 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:31:33,480 [INFO] Testing combination 31/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 21:34:54,236 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:34:54,237 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:34:54,237 [INFO] Testing combination 32/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:37:58,230 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:37:58,231 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:37:58,231 [INFO] Testing combination 33/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 21:40:33,543 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:40:33,543 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:40:33,543 [INFO] Testing combination 34/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:42:18,926 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:42:18,927 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:42:18,927 [INFO] Testing combination 35/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 21:44:18,245 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:44:18,246 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:44:18,246 [INFO] Testing combination 36/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': None, 'batch_size': 32, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:49:30,493 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:49:30,494 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:49:30,494 [INFO] Testing combination 37/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 21:50:56,132 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:50:56,133 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:50:56,133 [INFO] Testing combination 38/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 21:52:15,129 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:52:15,130 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:52:15,130 [INFO] Testing combination 39/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 21:54:02,898 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:54:02,898 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:54:02,898 [INFO] Testing combination 40/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 21:55:34,066 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:55:34,067 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:55:34,067 [INFO] Testing combination 41/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 21:59:42,941 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 21:59:42,943 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 21:59:42,943 [INFO] Testing combination 42/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 22:00:53,194 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 22:00:53,195 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:00:53,195 [INFO] Testing combination 43/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 22:02:29,522 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 22:02:29,523 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:02:29,523 [INFO] Testing combination 44/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': None, 'batch_size': 32, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:05:00,266 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 22:05:00,266 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:05:00,266 [INFO] Testing combination 45/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 22:06:25,928 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 22:06:25,929 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:06:25,929 [INFO] Testing combination 46/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:07:36,756 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 22:07:36,757 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:07:36,757 [INFO] Testing combination 47/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:08:36,912 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 22:08:36,912 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:08:36,912 [INFO] Testing combination 48/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:10:22,607 [INFO] Best Validation Accuracy: 89.42
+2024-10-04 22:10:22,608 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:10:22,608 [INFO] Testing combination 49/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:14:31,748 [INFO] New best accuracy: 89.44, params: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:14:31,749 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:14:31,749 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:14:31,749 [INFO] Testing combination 50/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': None, 'batch_size': 64, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:18:04,282 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:18:04,282 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:18:04,282 [INFO] Testing combination 51/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:19:32,539 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:19:32,540 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:19:32,540 [INFO] Testing combination 52/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 256, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:23:34,263 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:23:34,264 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:23:34,264 [INFO] Testing combination 53/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': 0.1, 'batch_size': 32, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 22:27:02,009 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:27:02,010 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:27:02,010 [INFO] Testing combination 54/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:28:23,250 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:28:23,251 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:28:23,251 [INFO] Testing combination 55/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:29:28,352 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:29:28,353 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:29:28,353 [INFO] Testing combination 56/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:31:47,453 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:31:47,453 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:31:47,453 [INFO] Testing combination 57/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:36:02,123 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:36:02,124 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:36:02,124 [INFO] Testing combination 58/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': None, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:37:30,354 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:37:30,355 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:37:30,355 [INFO] Testing combination 59/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': 0.1, 'batch_size': 32, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 22:40:29,487 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:40:29,488 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:40:29,488 [INFO] Testing combination 60/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 32, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 22:43:16,457 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:43:16,458 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:43:16,458 [INFO] Testing combination 61/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:44:49,629 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:44:49,630 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:44:49,630 [INFO] Testing combination 62/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:46:21,601 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:46:21,602 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:46:21,602 [INFO] Testing combination 63/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.1, 'batch_size': 32, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:50:51,925 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:50:51,926 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:50:51,926 [INFO] Testing combination 64/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:53:33,030 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:53:33,031 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:53:33,031 [INFO] Testing combination 65/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:55:05,772 [INFO] Best Validation Accuracy: 89.44
+2024-10-04 22:55:05,772 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 22:55:05,772 [INFO] Testing combination 66/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:57:36,543 [INFO] New best accuracy: 89.54, params: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:57:36,543 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 22:57:36,543 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 22:57:36,543 [INFO] Testing combination 67/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:03:26,881 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:03:26,882 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:03:26,882 [INFO] Testing combination 68/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:07:48,402 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:07:48,403 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:07:48,403 [INFO] Testing combination 69/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 23:09:09,929 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:09:09,929 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:09:09,930 [INFO] Testing combination 70/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 23:09:40,330 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:09:40,330 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:09:40,330 [INFO] Testing combination 71/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 23:11:36,252 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:11:36,252 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:11:36,252 [INFO] Testing combination 72/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 23:12:56,299 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:12:56,300 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:12:56,300 [INFO] Testing combination 73/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 23:15:49,699 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:15:49,699 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:15:49,699 [INFO] Testing combination 74/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': 0.1, 'batch_size': 32, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 23:19:31,975 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:19:31,976 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:19:31,976 [INFO] Testing combination 75/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:21:24,702 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:21:24,702 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:21:24,703 [INFO] Testing combination 76/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 256, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 23:23:08,223 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:23:08,223 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:23:08,224 [INFO] Testing combination 77/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': None, 'batch_size': 256, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 23:23:56,155 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:23:56,155 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:23:56,156 [INFO] Testing combination 78/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 32, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 23:26:38,472 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:26:38,473 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:26:38,473 [INFO] Testing combination 79/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 23:29:45,841 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:29:45,841 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:29:45,841 [INFO] Testing combination 80/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:30:58,229 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:30:58,230 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:30:58,230 [INFO] Testing combination 81/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 256, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 23:31:51,865 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:31:51,866 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:31:51,866 [INFO] Testing combination 82/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 23:32:41,849 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:32:41,849 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:32:41,850 [INFO] Testing combination 83/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': None, 'batch_size': 128, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:35:22,624 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:35:22,625 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:35:22,625 [INFO] Testing combination 84/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 23:37:43,745 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:37:43,746 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:37:43,746 [INFO] Testing combination 85/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 23:38:34,706 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:38:34,707 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:38:34,707 [INFO] Testing combination 86/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 23:40:02,462 [INFO] Best Validation Accuracy: 89.54
+2024-10-04 23:40:02,462 [INFO] Best Hyperparameters: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:40:02,462 [INFO] Testing combination 87/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:41:52,564 [INFO] New best accuracy: 89.58, params: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:41:52,565 [INFO] Best Validation Accuracy: 89.58
+2024-10-04 23:41:52,565 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:41:52,565 [INFO] Testing combination 88/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': None, 'batch_size': 32, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 23:45:14,067 [INFO] Best Validation Accuracy: 89.58
+2024-10-04 23:45:14,068 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:45:14,068 [INFO] Testing combination 89/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:49:37,920 [INFO] Best Validation Accuracy: 89.58
+2024-10-04 23:49:37,920 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:49:37,920 [INFO] Testing combination 90/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-04 23:50:23,815 [INFO] Best Validation Accuracy: 89.58
+2024-10-04 23:50:23,816 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:50:23,816 [INFO] Testing combination 91/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 256, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 23:52:50,298 [INFO] Best Validation Accuracy: 89.58
+2024-10-04 23:52:50,298 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:52:50,298 [INFO] Testing combination 92/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 23:54:46,525 [INFO] Best Validation Accuracy: 89.58
+2024-10-04 23:54:46,526 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:54:46,526 [INFO] Testing combination 93/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 23:56:14,099 [INFO] Best Validation Accuracy: 89.58
+2024-10-04 23:56:14,100 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:56:14,100 [INFO] Testing combination 94/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-04 23:57:54,487 [INFO] Best Validation Accuracy: 89.58
+2024-10-04 23:57:54,487 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:57:54,487 [INFO] Testing combination 95/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-04 23:59:26,280 [INFO] Best Validation Accuracy: 89.58
+2024-10-04 23:59:26,280 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-04 23:59:26,280 [INFO] Testing combination 96/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 00:02:24,483 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:02:24,484 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:02:24,484 [INFO] Testing combination 97/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:04:00,573 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:04:00,573 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:04:00,573 [INFO] Testing combination 98/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': None, 'batch_size': 32, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 00:09:08,718 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:09:08,719 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:09:08,719 [INFO] Testing combination 99/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-05 00:15:40,627 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:15:40,628 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:15:40,628 [INFO] Testing combination 100/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:17:08,647 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:17:08,648 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:17:08,648 [INFO] Testing combination 101/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 00:21:14,027 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:21:14,027 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:21:14,027 [INFO] Testing combination 102/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:21:56,961 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:21:56,961 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:21:56,961 [INFO] Testing combination 103/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': None, 'batch_size': 256, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 00:22:31,428 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:22:31,428 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:22:31,428 [INFO] Testing combination 104/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 00:27:15,694 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:27:15,694 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:27:15,694 [INFO] Testing combination 105/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:31:54,343 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:31:54,344 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:31:54,344 [INFO] Testing combination 106/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-05 00:35:12,664 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:35:12,665 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:35:12,665 [INFO] Testing combination 107/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:40:59,603 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:40:59,604 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:40:59,604 [INFO] Testing combination 108/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:46:19,482 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:46:19,483 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:46:19,483 [INFO] Testing combination 109/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:50:46,080 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:50:46,081 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:50:46,081 [INFO] Testing combination 110/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 00:53:39,433 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:53:39,433 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:53:39,433 [INFO] Testing combination 111/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-05 00:54:49,822 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:54:49,823 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:54:49,823 [INFO] Testing combination 112/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 00:56:29,625 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:56:29,626 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:56:29,626 [INFO] Testing combination 113/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': None, 'batch_size': 256, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 00:57:55,311 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:57:55,312 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:57:55,312 [INFO] Testing combination 114/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:59:18,422 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 00:59:18,422 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 00:59:18,423 [INFO] Testing combination 115/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:05:27,801 [INFO] Best Validation Accuracy: 89.58
+2024-10-05 01:05:27,802 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:05:27,802 [INFO] Testing combination 116/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:07:55,932 [INFO] New best accuracy: 89.7, params: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:07:55,933 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:07:55,933 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:07:55,933 [INFO] Testing combination 117/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': None, 'batch_size': 128, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:09:24,133 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:09:24,134 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:09:24,134 [INFO] Testing combination 118/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:10:36,441 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:10:36,442 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:10:36,442 [INFO] Testing combination 119/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:12:42,187 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:12:42,187 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:12:42,187 [INFO] Testing combination 120/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 32, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 01:14:41,817 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:14:41,817 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:14:41,817 [INFO] Testing combination 121/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 01:16:05,196 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:16:05,196 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:16:05,196 [INFO] Testing combination 122/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 01:19:30,036 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:19:30,036 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:19:30,036 [INFO] Testing combination 123/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 32, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 5}
+2024-10-05 01:22:52,331 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:22:52,332 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:22:52,332 [INFO] Testing combination 124/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:25:04,767 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:25:04,767 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:25:04,768 [INFO] Testing combination 125/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:26:25,851 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:26:25,852 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:26:25,852 [INFO] Testing combination 126/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 32, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:30:49,163 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:30:49,164 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:30:49,164 [INFO] Testing combination 127/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:31:37,577 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:31:37,577 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:31:37,577 [INFO] Testing combination 128/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-05 01:33:14,948 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:33:14,949 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:33:14,949 [INFO] Testing combination 129/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 32, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:35:38,153 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:35:38,154 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:35:38,154 [INFO] Testing combination 130/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:37:13,235 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:37:13,236 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:37:13,236 [INFO] Testing combination 131/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 01:39:29,042 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:39:29,043 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:39:29,043 [INFO] Testing combination 132/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-05 01:40:29,035 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:40:29,035 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:40:29,035 [INFO] Testing combination 133/150: {'lr': 0.001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:42:34,803 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:42:34,804 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:42:34,804 [INFO] Testing combination 134/150: {'lr': 0.0001, 'hidden_sizes': [512, 512, 512], 'p_dropout': None, 'batch_size': 128, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:43:17,723 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:43:17,723 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:43:17,723 [INFO] Testing combination 135/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:44:24,944 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:44:24,945 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:44:24,945 [INFO] Testing combination 136/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:45:59,761 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:45:59,762 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:45:59,762 [INFO] Testing combination 137/150: {'lr': 0.0001, 'hidden_sizes': [512, 256, 128], 'p_dropout': None, 'batch_size': 128, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:46:58,858 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:46:58,859 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:46:58,859 [INFO] Testing combination 138/150: {'lr': 0.0001, 'hidden_sizes': [256, 128], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:48:42,926 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:48:42,927 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:48:42,927 [INFO] Testing combination 139/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': None, 'batch_size': 256, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 01:49:39,720 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:49:39,721 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:49:39,721 [INFO] Testing combination 140/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 128, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 01:50:18,187 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:50:18,187 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:50:18,187 [INFO] Testing combination 141/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:51:45,081 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:51:45,081 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:51:45,081 [INFO] Testing combination 142/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': 'layer', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 01:53:43,314 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:53:43,315 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:53:43,315 [INFO] Testing combination 143/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.3, 'batch_size': 128, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 01:59:07,736 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 01:59:07,736 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 01:59:07,736 [INFO] Testing combination 144/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 02:00:19,516 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 02:00:19,517 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 02:00:19,517 [INFO] Testing combination 145/150: {'lr': 0.0001, 'hidden_sizes': [128, 128], 'p_dropout': 0.1, 'batch_size': 32, 'normalization': '', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 02:07:37,975 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 02:07:37,976 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 02:07:37,976 [INFO] Testing combination 146/150: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': '', 'activation': 'relu', 'early_stopping': 5}
+2024-10-05 02:09:28,760 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 02:09:28,761 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 02:09:28,761 [INFO] Testing combination 147/150: {'lr': 0.001, 'hidden_sizes': [256, 128], 'p_dropout': 0.3, 'batch_size': 64, 'normalization': 'layer', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 02:11:17,341 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 02:11:17,342 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 02:11:17,342 [INFO] Testing combination 148/150: {'lr': 0.0001, 'hidden_sizes': [128, 64], 'p_dropout': 0.3, 'batch_size': 32, 'normalization': '', 'activation': 'lrelu', 'early_stopping': 10}
+2024-10-05 02:20:46,576 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 02:20:46,577 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 02:20:46,577 [INFO] Testing combination 149/150: {'lr': 0.001, 'hidden_sizes': [128, 64], 'p_dropout': 0.3, 'batch_size': 256, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 5}
+2024-10-05 02:21:34,649 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 02:21:34,650 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
+2024-10-05 02:21:34,650 [INFO] Testing combination 150/150: {'lr': 0.001, 'hidden_sizes': [512, 512, 512], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'relu', 'early_stopping': 10}
+2024-10-05 02:23:26,596 [INFO] Best Validation Accuracy: 89.7
+2024-10-05 02:23:26,597 [INFO] Best Hyperparameters: {'lr': 0.001, 'hidden_sizes': [512, 256, 128], 'p_dropout': 0.1, 'batch_size': 64, 'normalization': 'batch', 'activation': 'lrelu', 'early_stopping': 5}
