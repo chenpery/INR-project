@@ -231,7 +231,7 @@ class Trainer(abc.ABC):
             pbar.set_description(
                 f"{pbar_name} "
                 f"(Avg. Loss {avg_loss:.3f}, "
-                f"Accuracy {accuracy:.1f})"
+                f"Accuracy {accuracy:.2f})"
             )
 
         return EpochResult(losses=losses, accuracy=accuracy)
