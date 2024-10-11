@@ -43,7 +43,7 @@ def attack_classifier(model,
         What should be the set of parameters the optimizer will be changing? Hint: NOT model.parameters()!
         '''
         attack_learning_rate = 0.01 * linf_bound
-        optimizer = optim.Adam([perts], lr=attack_learning_rate)
+        optimizer = optim.RMSprop([perts], lr=attack_learning_rate, alpha=0.99)
 
         '''Every step here is one PGD iteration (meaning, one attack optimization step) optimizing your perturbations.
         After the loop below is over you'd have all fully-optimized perturbations for the current batch of vectors.'''
@@ -130,5 +130,6 @@ if __name__ == '__main__':
         print(f'Attacking with linf_bound={bound}')
         all_labels, all_preds = attack_classifier(classifier, test_functaloader, criterion, bound)
         accuracy = accuracy_score(all_labels, all_preds) * 100
+        accuracies.append(accuracy)
         print(f'Accuracy after attack with linf_bound={bound}: {accuracy:.2f}%')
-        #call the attack_classifier function for every bound
+    print(accuracies)
