@@ -90,7 +90,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Optimize an adversarial attack over a pre-trained weight-space classifier')
     parser.add_argument('-p', '--data-path', type=str, default='/datasets/functaset',
                         help='The path to INR dataset (a.k.a functaset)')
-    parser.add_argument('-b', '--batch-size', type=int, default=64,
+    parser.add_argument('-b', '--batch-size', type=int, default=1,
                         help='The path to INR dataset (a.k.a functaset)')
     parser.add_argument('-c', '--cpu', action='store_true', help = "If set, use cpu and not cuda")
     parser.add_argument('-m', '--model-path', type=str, default='checkpoints/mlp_final.pt', help="Path to your pretrained classifier model weights")

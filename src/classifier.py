@@ -62,7 +62,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train a weight-space classifier')
     parser.add_argument('-p', '--data-path', type=str, default='/datasets/functaset',
                         help='The path to INR dataset (a.k.a functaset)')
-    parser.add_argument('-b', '--batch-size', type=int, default=128,
+    parser.add_argument('-b', '--batch-size', type=int, default=64,
                         help='The path to INR dataset (a.k.a functaset)')
     parser.add_argument('-c', '--cpu', action='store_true', help = "If set, use cpu and not cuda")
     # add any other parameters you may need here
