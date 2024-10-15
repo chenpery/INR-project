@@ -15,8 +15,8 @@ def attack_classifier(model,
                       loader: DataLoader,
                       criterion,
                       linf_bound,
-                      num_pgd_steps = 10,
-                      device = "cuda"):
+                      num_pgd_steps=10,
+                      device="cuda"):
     """
     :param model: your trained classifier model
     :param loader: data loader for input to be perturbed
@@ -28,47 +28,48 @@ def attack_classifier(model,
     4. Evaluation: assessing the model's accuracy on perturbed inputs.
     """
 
-    model.eval() #Model should be used in evaluation mode - we are not training any model weights.
+    model.eval()  # Model should be used in evaluation mode - we are not training any model weights.
     all_preds = []
     all_labels = []
     prog_bar = tqdm(loader, total=len(loader))
     for vectors, labels in prog_bar:
         vectors, labels = vectors.to(device), labels.to(device)
-        perts = torch.zeros_like(vectors) #initialize the perturbation vectors for current iteration
-        
+        perts = torch.zeros_like(vectors)  # initialize the perturbation vectors for current iteration
+
         ''' TODO (1): Your perts tensor currently will not be optimized since torch wasn't instructed to track gradients for it - make torch track its gradients. '''
         perts.requires_grad = True
 
         ''' TODO (2): Initialize your optimizer, you might need to finetune the learn-rate.
         What should be the set of parameters the optimizer will be changing? Hint: NOT model.parameters()!
         '''
-        attack_learning_rate = 0.01 * linf_bound
+        attack_learning_rate = linf_bound / 4
+        # optimizer = optim.Adam([perts], lr=attack_learning_rate)
         optimizer = optim.RMSprop([perts], lr=attack_learning_rate, alpha=0.99)
 
         '''Every step here is one PGD iteration (meaning, one attack optimization step) optimizing your perturbations.
         After the loop below is over you'd have all fully-optimized perturbations for the current batch of vectors.'''
-        for step in range(num_pgd_steps): 
-
-            preds = model(vectors + perts) #feed currently perturbed data into the model
+        for step in range(num_pgd_steps):
+            preds = model(vectors + perts)  # feed currently perturbed data into the model
             ''' TODO (3):  What's written in this line for the loss is almost correct. Change the code to MAXIMIZE the loss'''
             # optimizer minimize the loss and we want to maximize the loos to make the model misclassify
             # minimizing -loss is equivalent to maximizing the loss
             loss = -criterion(preds, labels)
-            
+
             optimizer.zero_grad()
             loss.backward()
             optimizer.step()
-            
+
             ''' TODO (4): Perform needed L_inf norm bound projection. The 'torch.clamp' function could be useful.'''
             # applying the L∞ norm constraint
             # ensures that each element of perts remains within the range [-linf_bound, linf_bound]
             # constraint should not influence gradient calculations.
             with torch.no_grad():
-                perts.clamp_(-linf_bound, linf_bound)
-            assert perts.abs().max().item() <= linf_bound #If this assert fails, you have a mistake in TODO(4) 
-            perts = perts.detach().requires_grad_() #Reset gradient tracking - we don't want to track gradients for norm projection.
-            
-            
+                epsilon = 1e-10
+                perts.clamp_(-linf_bound + epsilon, linf_bound - epsilon)
+
+            assert perts.abs().max().item() <= linf_bound  # If this assert fails, you have a mistake in TODO(4)
+            perts = perts.detach().requires_grad_()  # Reset gradient tracking - we don't want to track gradients for norm projection.
+
         ''' TODO (5): Accumulate predictions and labels to compute final accuracy for the attacked classifier.
         You can compute final predictions by taking the argmax over the softmax of predictions.'''
         with torch.no_grad():
