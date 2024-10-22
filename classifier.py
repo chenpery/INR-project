@@ -5,13 +5,13 @@ In this script you should train your 'clean' weight-space classifier.
 import os
 import torch
 import torch.nn as nn
-from utils import set_random_seeds, vec_to_img, get_fmnist_functa
+from src.utils import set_random_seeds, vec_to_img, get_fmnist_functa
 import numpy as np
-from SIREN import ModulatedSIREN
+from src.SIREN import ModulatedSIREN
 import argparse
-from mlp import MLP, ACTIVATIONS, ACTIVATION_DEFAULT_KWARGS
+from src.mlp import MLP, ACTIVATIONS, ACTIVATION_DEFAULT_KWARGS
 import torch.optim as optim
-from training import ClassifierTrainer
+from src.training import ClassifierTrainer
 
 
 # A basic linear classifier.
