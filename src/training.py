@@ -319,27 +319,44 @@ class AdversarialTrainer(ClassifierTrainer):
 
         return perts.detach()  # Return adversarial examples
 
-
     def train_batch(self, batch) -> BatchResult:
         X, y = batch
         if self.device:
             X = X.to(self.device)
             y = y.to(self.device)
 
-        clean_y_pred = self.model.forward(X)
+        # Generate adversarial examples
+        self.model.eval()  # Keep BN layers in eval mode for adversarial attack generation
+        pert = self.attack(X, y)
+        self.model.train()  # Return to train mode
+
+        # Concatenate clean and adversarial examples
+        X_combined = torch.cat([X, X + pert], dim=0)
+        y_combined = torch.cat([y, y], dim=0)
+
+        # Forward pass on concatenated batch
+        combined_y_pred = self.model.forward(X_combined)
+
+        # Split predictions for clean and adversarial examples
+        clean_y_pred, adv_y_pred = torch.split(combined_y_pred, X.size(0), dim=0)
+
+        # Calculate individual losses
         clean_loss = self.loss_fn(clean_y_pred, y)
-        pert= self.attack(X,y)
-        adv_y_pred = self.model.forward(X+pert)
         adv_loss = self.loss_fn(adv_y_pred, y)
-        tot_loss =adv_loss*0.75+0.25*clean_loss
+
+        # Total loss with weighted contributions
+        tot_loss = 0.5 * adv_loss + 0.5 * clean_loss
+
+        # Backpropagation and optimization step
         self.optimizer.zero_grad()
         tot_loss.backward()
         self.optimizer.step()
 
-        # Calculate number of correct predictions
+        # Calculate the number of correct predictions for clean data
         predicted_classes = torch.argmax(clean_y_pred, dim=1)
         num_correct = (predicted_classes == y).sum().item()
         batch_loss = float(clean_loss)
 
         return BatchResult(batch_loss, num_correct)
+
 
