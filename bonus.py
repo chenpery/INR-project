@@ -1,62 +1,20 @@
-"""
-In this script you should train your 'clean' weight-space classifier.
-"""
-
 import os
-import torch
-import torch.nn as nn
-from src.utils import set_random_seeds, vec_to_img, get_fmnist_functa
+import sys
+import pathlib
+import urllib
+import shutil
+import re
 import numpy as np
-from src.SIREN import ModulatedSIREN
+import torch
+import matplotlib.pyplot as plt
+from torch import nn, optim
+from torch.utils.data import DataLoader
+from classifier import evaluate_model, VanillaClassifier
+from src.utils import set_random_seeds, vec_to_img, get_fmnist_functa
+from src.training import  AdversarialTrainer
 import argparse
-from src.mlp import MLP, ACTIVATIONS, ACTIVATION_DEFAULT_KWARGS
-import torch.optim as optim
-from src.training import ClassifierTrainer
-
-
-# A basic linear classifier.
-class VanillaClassifier(nn.Module):
-    def __init__(self, in_features=512, num_classes=10, hidden_dims=None, nonlins=None, p_dropout=None, normalization=""):
-        """
-        :param in_features: input_dimension.
-        :param num_classes: number of classes (output dimension).
-        """
-        super(VanillaClassifier, self).__init__()
-        if hidden_dims is None:
-            hidden_dims=[]
-        if nonlins is None:
-            nonlins=[]
-        self.net= MLP(in_dim=in_features, dims=hidden_dims+[num_classes], nonlins=nonlins +["none"],
-                      p_dropout=p_dropout, normalization=normalization)
-    def forward(self, x):
-        return self.net(x)
-
-
-def evaluate_model(model, dataloader, device):
-    model.eval()  # Set the model to evaluation mode
-    correct = 0
-    total = 0
-
-    # Disable gradient calculation during inference
-    with torch.no_grad():
-        for batch in dataloader:
-            X, y = batch
-            X, y = X.to(device), y.to(device)
-
-            # Forward pass
-            y_pred = model(X)
-
-            # Get predicted class (argmax over the outputs)
-            predicted = torch.argmax(y_pred, dim=1)
-
-            # Accumulate the total and correct predictions
-            correct += (predicted == y).sum().item()
-            total += y.size(0)
-
-    # Calculate accuracy
-    accuracy = correct / total
-    return accuracy
-
+from attack import attack_classifier
+from sklearn.metrics import accuracy_score
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Train a weight-space classifier')
@@ -64,7 +22,7 @@ if __name__ == '__main__':
                         help='The path to INR dataset (a.k.a functaset)')
     parser.add_argument('-b', '--batch-size', type=int, default=64,
                         help='The path to INR dataset (a.k.a functaset)')
-    parser.add_argument('-c', '--cpu', action='store_true', help = "If set, use cpu and not cuda")
+    parser.add_argument('-c', '--cpu', action='store_true', help="If set, use cpu and not cuda")
     # add any other parameters you may need here
     args = parser.parse_args()
 
@@ -73,23 +31,25 @@ if __name__ == '__main__':
     device = 'cpu' if args.cpu else 'cuda:0'
 
     # Handle data-loading - these loaders yield(vector,label) pairs.
-    train_functaloader = get_fmnist_functa(data_dir=f"{args.data_path}/fmnist_train.pkl",mode='train', batch_size = args.batch_size, num_workers = 2) 
-    val_functaloader = get_fmnist_functa(data_dir=f"{args.data_path}/fmnist_val.pkl",mode='test', batch_size = args.batch_size, num_workers = 2)
-    test_functaloader = get_fmnist_functa(data_dir=f"{args.data_path}/fmnist_test.pkl",mode='test', batch_size = args.batch_size, num_workers = 2)
-    
+    train_functaloader = get_fmnist_functa(data_dir=f"{args.data_path}/fmnist_train.pkl", mode='train',
+                                           batch_size=args.batch_size, num_workers=2)
+    val_functaloader = get_fmnist_functa(data_dir=f"{args.data_path}/fmnist_val.pkl", mode='test',
+                                         batch_size=args.batch_size, num_workers=2)
+    test_functaloader = get_fmnist_functa(data_dir=f"{args.data_path}/fmnist_test.pkl", mode='test',
+                                          batch_size=args.batch_size, num_workers=2)
+
 
     num_classes = 10
     in_features = 512
-    checkpoint_file = 'checkpoints/mlp'
+    checkpoint_file = 'checkpoints/robust_mlp'
     num_epochs = 500
-    early_stopping = 5
+    early_stopping = 10
     lr = 1e-3
     hidden_dims = [512, 256, 128]
     p_dropout = 0.1
     normalization = "batch"
     activations = ["lrelu"] * len(hidden_dims)
     loss_fn = nn.CrossEntropyLoss()
-
 
     # Instantiate Classifier Model
     model = VanillaClassifier(in_features=in_features, num_classes=num_classes, hidden_dims=hidden_dims,
@@ -98,10 +58,13 @@ if __name__ == '__main__':
     optimizer = optim.AdamW(model.parameters(), lr=lr)
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.1, patience=3, verbose=True)
 
+
     def post_epoch_fn(epoch, train_res, test_res, verbose):
         scheduler.step(test_res.accuracy)
 
-    trainer = ClassifierTrainer(model, loss_fn, optimizer, device)
+
+    trainer = AdversarialTrainer(model, loss_fn, optimizer, device=device, randomize=False, linf_bound=0.01,
+                                 num_pgd_steps=10)
 
     # Train, unless final checkpoint is found
     checkpoint_file_final_prefix = f'{checkpoint_file}_final'
@@ -117,7 +80,7 @@ if __name__ == '__main__':
                                   post_epoch_fn=post_epoch_fn, early_stopping=early_stopping,
                                   checkpoints=checkpoint_file_final_prefix, print_every=None)
 
-            #load best model
+            # load best model
             if os.path.isfile(checkpoint_file_final):
                 saved_state = torch.load(checkpoint_file_final, map_location=device)
                 model.load_state_dict(saved_state['model_state'])
@@ -135,6 +98,16 @@ if __name__ == '__main__':
     print(f'Test Accuracy: {test_accuracy * 100:.2f}%')
 
 
+    test_functaloader = get_fmnist_functa(data_dir=f"{args.data_path}/fmnist_test.pkl", mode='test',
+                                          batch_size=1, num_workers=2)
 
-    
-  
+    linf_bounds = [10 ** (-i) for i in range(3, 7)] + [5 * 10 ** (-i) for i in range(3, 7)]
+    linf_bounds.sort()
+    accuracies = []
+    for bound in linf_bounds:
+        print(f'Attacking with linf_bound={bound}')
+        all_labels, all_preds = attack_classifier(model, test_functaloader, loss_fn, bound)
+        accuracy = accuracy_score(all_labels, all_preds) * 100
+        accuracies.append(accuracy)
+        print(f'Accuracy after attack with linf_bound={bound}: {accuracy:.2f}%')
+    print(accuracies)
