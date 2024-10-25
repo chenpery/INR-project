@@ -3,9 +3,7 @@ import torch
 from torch import nn, optim
 from torch.utils.data import DataLoader
 
-from utils import set_random_seeds, vec_to_img, get_fmnist_functa
-import numpy as np
-from SIREN import ModulatedSIREN
+from src.utils import set_random_seeds, get_fmnist_functa
 from classifier import VanillaClassifier
 import argparse
 from sklearn.metrics import accuracy_score

@@ -5,13 +5,13 @@ In this script you should train your 'clean' weight-space classifier.
 import os
 import torch
 import torch.nn as nn
-from utils import set_random_seeds, vec_to_img, get_fmnist_functa
+from src.utils import set_random_seeds, vec_to_img, get_fmnist_functa
 import numpy as np
-from SIREN import ModulatedSIREN
+from src.SIREN import ModulatedSIREN
 import argparse
-from mlp import MLP, ACTIVATIONS, ACTIVATION_DEFAULT_KWARGS
+from src.mlp import MLP, ACTIVATIONS, ACTIVATION_DEFAULT_KWARGS
 import torch.optim as optim
-from training import ClassifierTrainer
+from src.training import ClassifierTrainer
 
 
 # A basic linear classifier.
@@ -77,15 +77,7 @@ if __name__ == '__main__':
     val_functaloader = get_fmnist_functa(data_dir=f"{args.data_path}/fmnist_val.pkl",mode='test', batch_size = args.batch_size, num_workers = 2)
     test_functaloader = get_fmnist_functa(data_dir=f"{args.data_path}/fmnist_test.pkl",mode='test', batch_size = args.batch_size, num_workers = 2)
     
-    # Load Full INR - this is only for visualization purposes - this is just an example, you can erase this when you submit
-    #inr = ModulatedSIREN(height=28, width=28, hidden_features=256, num_layers=10, modul_features=512)
-    #inr.load_state_dict(torch.load(f"{args.data_path}/modSiren.pth")['state_dict'])
-    #inr = inr.to(device)
-    
-    #Example of extracting full image from modulation vector - must pass a single (non-batched) vector input - this is just an example, you can erase this when you submit
-    #img = vec_to_img(inr, train_functaloader.dataset[0][0].to(device))
 
-    # TODO: Implement your training and evaluation loops here. We recommend you also save classifier weights for next parts
     num_classes = 10
     in_features = 512
     checkpoint_file = 'checkpoints/mlp'
@@ -143,9 +135,6 @@ if __name__ == '__main__':
     print(f'Test Accuracy: {test_accuracy * 100:.2f}%')
 
 
-    #inference example
-    #predicted_scores = classifier(train_functaloader.dataset[0][0].to(device))
-    
 
     
   

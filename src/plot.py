@@ -1,7 +1,7 @@
 import numpy as np
 import itertools
 import matplotlib.pyplot as plt
-from train_results import FitResult
+from .train_results import FitResult
 
 
 def plot_fit(fit_res: FitResult, fig=None, log_loss=False, legend=None):

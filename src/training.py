@@ -6,8 +6,8 @@ import torch
 from typing import Any, Callable
 from pathlib import Path
 from torch.utils.data import DataLoader
-
-from train_results import FitResult, BatchResult, EpochResult
+from torch import optim
+from .train_results import FitResult, BatchResult, EpochResult
 
 
 class Trainer(abc.ABC):
@@ -284,6 +284,78 @@ class ClassifierTrainer(Trainer):
             num_correct = (predicted_classes == y).sum().item()
             batch_loss = float(loss)
             # ========================
+
+        return BatchResult(batch_loss, num_correct)
+
+
+
+class AdversarialTrainer(ClassifierTrainer):
+    def __init__(self, model, loss_fn, optimizer, linf_bound=1e-6, num_pgd_steps=10, randomize=False, device=None):
+        super().__init__(model, loss_fn, optimizer, device)
+        self.linf_bound = linf_bound
+        self.num_pgd_steps = num_pgd_steps
+        self.randomize = randomize
+
+    def attack(self, X, y):
+        if self.device:
+            X = X.to(self.device)
+            y = y.to(self.device)
+
+        if self.randomize:
+            perts = torch.rand_like(X, requires_grad=True)
+            perts.data = perts.data * 2 * self.linf_bound - self.linf_bound
+        else:
+            perts = torch.zeros_like(X, requires_grad=True)
+
+        attack_learning_rate = self.linf_bound / 4
+
+        # Perform PGD steps
+        for step in range(self.num_pgd_steps):
+            logits = self.model(X + perts)
+            loss = self.loss_fn(logits, y)
+            loss.backward()
+            perts.data = (perts + attack_learning_rate*perts.grad.detach()).clamp(-self.linf_bound, self.linf_bound)
+            perts = perts.detach().requires_grad_()
+
+        return perts.detach()  # Return adversarial examples
+
+    def train_batch(self, batch) -> BatchResult:
+        X, y = batch
+        if self.device:
+            X = X.to(self.device)
+            y = y.to(self.device)
+
+        # Generate adversarial examples
+        self.model.eval()  # Keep BN layers in eval mode for adversarial attack generation
+        pert = self.attack(X, y)
+        self.model.train()  # Return to train mode
+
+        # Concatenate clean and adversarial examples
+        X_combined = torch.cat([X, X + pert], dim=0)
+        y_combined = torch.cat([y, y], dim=0)
+
+        # Forward pass on concatenated batch
+        combined_y_pred = self.model.forward(X_combined)
+
+        # Split predictions for clean and adversarial examples
+        clean_y_pred, adv_y_pred = torch.split(combined_y_pred, X.size(0), dim=0)
+
+        # Calculate individual losses
+        clean_loss = self.loss_fn(clean_y_pred, y)
+        adv_loss = self.loss_fn(adv_y_pred, y)
+
+        # Total loss with weighted contributions
+        tot_loss = 0.5 * adv_loss + 0.5 * clean_loss
+
+        # Backpropagation and optimization step
+        self.optimizer.zero_grad()
+        tot_loss.backward()
+        self.optimizer.step()
+
+        # Calculate the number of correct predictions for clean data
+        predicted_classes = torch.argmax(clean_y_pred, dim=1)
+        num_correct = (predicted_classes == y).sum().item()
+        batch_loss = float(clean_loss)
 
         return BatchResult(batch_loss, num_correct)
 
